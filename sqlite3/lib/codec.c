@@ -7,12 +7,12 @@
 #include "codec.h"
 
 // codec.go exports.
-int go_codec_init(const CodecCtx*,void**,char**);
-int go_codec_reserve(void*);
-void go_codec_resize(void*,int,int);
-void *go_codec_exec(void*,void*,u32,int);
-void go_codec_get_key(void*,void**,int*);
-void go_codec_free(void*);
+extern int go_codec_init(const CodecCtx*,void**,char**);
+extern int go_codec_reserve(void*);
+extern void go_codec_resize(void*,int,int);
+extern void *go_codec_exec(void*,void*,u32,int);
+extern void go_codec_get_key(void*,void**,int*);
+extern void go_codec_free(void*);
 
 // sqlite3_key sets the codec key for the main database.
 SQLITE_API int sqlite3_key(sqlite3 *db, const void *pKey, int nKey) {
